@@ -1,5 +1,5 @@
 {
-	"name": "mempanel.as",
+	"name": "jinx-mempanel",
 	"version": "1.0.0-1",
 	"description": "memPanel is a plugin for AS3 that show flash performance",
 	"license": "MIT",
