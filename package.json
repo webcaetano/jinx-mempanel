@@ -21,7 +21,7 @@
 	"dependencies": {},
 	"files": [
 		"./index.as",
-		"./lib/visitor.swc",
+		"./lib/visitor.swc"
 	],
 	"scripts": {
 		"test": "gulp test"
