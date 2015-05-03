@@ -1,6 +1,6 @@
 {
 	"name": "mempanel.as",
-	"version": "1.0.0",
+	"version": "1.0.0-1",
 	"description": "memPanel is a plugin for AS3 that show flash performance",
 	"license": "MIT",
 	"repository": {
@@ -20,8 +20,8 @@
 	],
 	"dependencies": {},
 	"files": [
-		"./index.as",
-		"./lib/visitor.swc"
+		"index.as",
+		"lib/visitor.swc"
 	],
 	"scripts": {
 		"test": "gulp test"
