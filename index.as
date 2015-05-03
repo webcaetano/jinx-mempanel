@@ -14,7 +14,7 @@ var $memPanel = function(){
 		var myFormat:TextFormat = new TextFormat();
 		myFormat.size = 12;
 		myFormat.align = TextFormatAlign.LEFT;
-		myFormat.font = $new('visitor').fontName;
+		myFormat.font = (new visitor()).fontName;
 
 		var myText = new TextField;
 		myText.$set({
@@ -25,7 +25,7 @@ var $memPanel = function(){
 			selectable:false,
 			textColor:0xFFFFFF,
 			x:3,
-			y:(13*(t+1))-22,
+			y:(13*(t+1))-14,
 			alpha:0.9
 		}).$add(panel);
 
