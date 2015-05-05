@@ -1,6 +1,6 @@
 {
 	"name": "jinx-mempanel",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "memPanel is a plugin for AS3 that show flash performance",
 	"license": "MIT",
 	"repository": {
@@ -8,7 +8,9 @@
 		"email": "webandrecaetano@gmail.com",
 		"url": "https://github.com/webcaetano"
 	},
-	"author": "Andre Caetano",
+	"author": {
+		"name": "Andre Caetano"
+	},
 	"keywords": [
 		"jinxplugin",
 		"plugin",
@@ -20,7 +22,7 @@
 	],
 	"dependencies": {},
 	"files": [
-		"index.as",
+		"index.jinx",
 		"lib/visitor.swc"
 	],
 	"scripts": {
@@ -67,5 +69,11 @@
 	},
 	"engines": {
 		"node": ">=0.10.0"
-	}
+	},
+	"readme": "# [![Imgur](http://i.imgur.com/FHjshUv.png)](https://github.com/webcaetano/jinx)\n\nmemPanel is a [Jinx](https://github.com/webcaetano/jinx) Plugin that show stage performance.\n\n---------------------------------\n\nThe MIT [License](https://raw.githubusercontent.com/webcaetano/memPanel/master/LICENSE.md)\n",
+	"readmeFilename": "README.md",
+	"gitHead": "4290821d751db29c5babc505c7759f8eaef1dbd4",
+	"_id": "jinx-mempanel@1.0.2",
+	"_shasum": "d04fad12f4e849187f86771564b8c96611e5c304",
+	"_from": "jinx-mempanel@1.0.2"
 }
