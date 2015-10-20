@@ -8,6 +8,10 @@ memPanel is a [Jinx](https://github.com/webcaetano/jinx) Package that show stage
 npm install jinx-mempanel
 ```
 
+### ScreenShot
+
+![jinx-mempanel](http://i.imgur.com/Qzcz8tm.jpg)
+
 ---------------------------------
 
 The MIT [License](https://raw.githubusercontent.com/webcaetano/memPanel/master/LICENSE.md)
