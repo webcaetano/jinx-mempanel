@@ -1,8 +1,9 @@
 'use strict';
 
 var gulp = require('gulp');
-var flash = require('gulp-flash');
+var jinxCompiler = require('gulp-jinx-compiler');
 var browserSync = require('browser-sync');
+var path = require('path');
 var through = require('through2');
 
 function isOnlyChange(event) {
@@ -18,46 +19,23 @@ module.exports = function(options) {
 			});
 		});
 
-		gulp.watch([
-			options.src + '/{app,components,less}/**/*.css',
-			options.src + '/{app,components,less}/**/*.scss'
-		], function(event) {
-			if(isOnlyChange(event)) {
-				gulp.start('styles',function(){
-					browserSync.reload();
-				});
-			} else {
-				gulp.start('inject');
-			}
-		});
-
-
 		gulp.watch(options.src + '/{app,components}/**/*.html', function(event) {
 			browserSync.reload(event.path);
 		});
 	});
 
-
-	function build(done,end){
-		return gulp.src(options.src + '/app/flash/main.as')
-		.pipe(flash(options.src + '/app/flash/dist',{
-			'debug':true, // enable this for detailed errors
+	gulp.task('build', function () {
+		var mainFile = path.join(options.src,'app/test.jinx');
+		return gulp.src(mainFile)
+		.pipe(jinxCompiler(options.src+'/app/flash/dist',{
 			'library-path': [
 				'lib'
 			]
 		}))
-		.pipe(through.obj(function(file, enc, callback){
-			if(done) done();
-			if(end) process.exit();
-		}));
-	}
-
-	gulp.task('build', function (done) {
-		build(done,true);
 	});
 
-	gulp.watch([options.src + '/app/flash/**/*.{as,swc}','jinx.as'], function(event) {
-		build(function(){
+	gulp.watch([options.src + '/app/**/*.{as,swc,jinx}','index.jinx'], function(event) {
+		gulp.start('build',function(){
 			browserSync.reload(event.path);
 		});
 	});
